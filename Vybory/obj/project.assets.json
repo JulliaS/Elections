@@ -12370,11 +12370,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Yulia\\Desktop\\DataBase\\Vybory\\Vybory\\Vybory.csproj",
+      "projectUniqueName": "C:\\Users\\Yulia\\Desktop\\my projects\\Elections\\Vybory\\Vybory.csproj",
       "projectName": "Vybory",
-      "projectPath": "C:\\Users\\Yulia\\Desktop\\DataBase\\Vybory\\Vybory\\Vybory.csproj",
+      "projectPath": "C:\\Users\\Yulia\\Desktop\\my projects\\Elections\\Vybory\\Vybory.csproj",
       "packagesPath": "C:\\Users\\Yulia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Yulia\\Desktop\\DataBase\\Vybory\\Vybory\\obj\\",
+      "outputPath": "C:\\Users\\Yulia\\Desktop\\my projects\\Elections\\Vybory\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
