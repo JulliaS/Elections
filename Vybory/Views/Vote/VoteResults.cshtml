@@ -1,0 +1,40 @@
+﻿@model dynamic
+@{
+    ViewData["Title"] = "VoteResults";
+}
+
+<head>
+    <title>Головна</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/CSS/ElectionStyle.css">
+</head>
+
+<body>
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index2","Home")">Головна</a>
+    </div>
+    <div class="main2">
+        <table class="table table-bordered table-responsive table-hover">
+            <tr>
+                <th>Номер Кандидата у Бюлетні</th>
+                <th>Ім'я</th>
+                <th>Прізвище</th>
+                <th>Кількість голосів</th>
+            </tr>
+          
+               @for (int i = 0; i < Model.Candidats.Count; i++)
+               {
+                   <tr>
+                       <td>@Model.Candidats[i].Number</td>
+                       <td>@Model.Users[i].Name</td>
+                       <td>@Model.Users[i].Surname</td>
+                       <td>@Model.Count[i]</td>
+                   </tr>
+               }
+          
+        </table>
+    </div>
+
+    <script src="~/js/ForDropDown.js"></script>
+</body>
+

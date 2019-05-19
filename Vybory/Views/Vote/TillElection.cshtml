@@ -1,0 +1,88 @@
+﻿@model Vybory.Models.Election
+
+@{
+    ViewData["Title"] = "TillElection";
+}
+
+<head>
+    <title>Голосування</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/CSS/ElectionStyle.css">
+</head>
+
+<script>
+    window.onload = function () {
+        time();
+        setInterval(function () {
+            time();
+        }, 1000);
+    };
+
+    //gets current time and changes html to reflect it
+    function time() {
+        var date = new Date();
+        years = @Model.StartVote.Year - date.getFullYear();
+        months = @Model.StartVote.Month - date.getMonth() - 1;
+        days = @Model.StartVote.Day - date.getDate();
+
+        hours = 24 - date.getHours();
+        hours = (hours == 24) ? (hours - 24) : hours;
+        minutes = 60 - date.getMinutes();
+        minutes = (minutes == 60) ? (minutes - 60) : minutes;
+        seconds = 60 - date.getSeconds();
+        seconds = (seconds == 60) ? (seconds - 60) : seconds;
+
+        //invokes function to make sure number has at least two digits
+        hours = addZero(hours);
+        minutes = addZero(minutes);
+        seconds = addZero(seconds);
+
+        //changes the html to match results
+        document.getElementsByClassName('years')[0].innerHTML = years;
+        document.getElementsByClassName('months')[0].innerHTML = months;
+        document.getElementsByClassName('days')[0].innerHTML = days;
+        document.getElementsByClassName('hours')[0].innerHTML = hours;
+        document.getElementsByClassName('minutes')[0].innerHTML = minutes;
+        document.getElementsByClassName('seconds')[0].innerHTML = seconds;
+    }
+
+    //turns single digit numbers to two digit numbers by placing a zero in front
+    function addZero(val) {
+        return (val <= 9) ? ("0" + val) : val;
+    }
+</script>
+
+<body>
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index2", "Home")">Головна</a>
+    </div>
+    <div class="main2">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Допомога</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="@Url.Action("Index2")">Інструкції</a>
+                <a href="@Url.Action("Index2")">Нормативно-правова база</a>
+                <a href="@Url.Action("Index2")">Довідкова інформація</a>
+            </div>
+        </div>
+
+        <p class="big_title">
+            До виборів залишилось:
+          
+            <div class="clock">
+                <span class="years">0</span>
+                <span> years </span>
+                <span class="months">0</span>
+                <span> months </span>
+                <span class="days">0</span>
+                <span> days </span>
+                <span class="hours">00</span>
+                <span> : </span>
+                <span class="minutes">00</span>
+                <span> : </span>
+                <span class="seconds">00</span>
+            </div>
+    </div>
+   
+    <script src="~/js/ForDropDown.js"></script>
+</body>

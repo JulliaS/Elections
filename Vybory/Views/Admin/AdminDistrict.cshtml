@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Vybory.Models.District>
+@{
+    ViewData["Title"] = "AdminDistrict";
+}
+
+<head>
+    <title>Головна</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/CSS/ElectionStyle.css">
+</head>
+<body>
+
+    <div class="header">
+        <a class="left_position" href="@Url.Action("StartAdminPage")">Початкова</a>
+    </div>
+    <div class="main2">
+        <p>
+            <a asp-action="CreateDistrict">Створити Новий Округ</a>
+        </p>
+        <table class="table table-bordered table-responsive table-hover formclass">
+            <tr>
+                <th>ID</th>
+                <th>Номер</th>
+                <th>Ім'я</th>
+                <th>Центр</th>
+                <th>Адреса ID</th>
+            </tr>
+            @foreach (var district in Model)
+            {
+                <tr>
+                    <td>@district.Id</td>
+                    <td>@district.Number</td>
+                    <td>@district.Name</td>
+                    <td>@district.Center</td>
+                    <td> <a asp-action="EditAddress" asp-route-id="@district.AddressId">@district.AddressId</a></td>
+                    <td>
+                        <a asp-action="EditDistrict" asp-route-id="@district.Id">Редагувати</a> |
+                        <a asp-action="DeleteDistrict" asp-route-id="@district.Id">Видалити</a>
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+
+    <script src="~/js/ForDropDown.js"></script>
+</body>

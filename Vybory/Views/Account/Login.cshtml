@@ -1,0 +1,54 @@
+﻿@model BLL.ViewModels.Login
+@{
+    ViewData["Title"] = "Login";
+}
+
+<head>
+    <title>Головна</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/CSS/ElectionStyle.css">
+</head>
+<body>
+
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index","Home")">Головна</a>
+    </div>
+    <div class="main2">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Допомога</button>
+
+            <div id="myDropdown" class="dropdown-content">
+                <a href="@Url.Action("Index2")">Інструкції</a>
+                <a href="@Url.Action("Index2")">Нормативно-правова база</a>
+                <a href="@Url.Action("Index2")">Довідкова інформація</a>
+            </div>
+        </div>
+        <br /><br />
+              <form asp-action="Login" asp-controller="Account" asp-anti-forgery="true" method="post">
+                  <div class="validation" asp-validation-summary="ModelOnly" />
+                  <p>Вхід</p>
+                  <div class="formclass">
+
+                      <div class="form-group">
+                          <label asp-for="UserLogin">Ідентифікаційний номер</label>
+                          <input type="text" asp-for="UserLogin" />
+                          <span asp-validation-for="UserLogin" />
+                      </div>
+                      <div class="form-group">
+                          <label asp-for="Password">Пароль</label>
+                          <input asp-for="Password" />
+                          <span asp-validation-for="Password" />
+                      </div>
+                      <div class="form-group">
+                          <input type="submit" value="Увійти" />
+                      </div>
+                      <div class="form-group">
+                          <a href="@Url.Action("Registrate", "Account")" value="Реєстрація"></a>
+                      </div>
+                  </div>
+              </form>
+    </div>
+    <script src="~/js/ForDropDown.js"></script>
+</body>
+
+

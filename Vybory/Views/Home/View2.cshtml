@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "View2";
+}
+
+<head>
+    <title>Головна</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/CSS/ElectionStyle.css">
+</head>
+<body>
+
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index")">Вихід</a>
+    </div>
+    <div class="main">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Допомога</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="@Url.Action("Index2")">Інструкції</a>
+                <a href="@Url.Action("Index2")">Нормативно-правова база</a>
+                <a href="@Url.Action("Index2")">Довідкова інформація</a>
+            </div>
+        </div>
+        <p class="big_title">
+            Вибори президента України
+            <br /><div style="font-size:60px; text-align: center;">2024</div>
+        </p>
+    </div>  
+    <div class="footer">
+        <a class="left_position" href="@Url.Action("InstructionFoVote")">Проголосувати</a>
+        <a class="center_position" href="@Url.Action("VoteResults","Vote")">Результати</a>
+        <a class="right_position">Подати заяву</a>
+    </div>
+
+    <script src="~/js/ForDropDown.js"></script>
+</body>

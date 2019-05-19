@@ -12,9 +12,18 @@ namespace Vybory.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return View("View1");
         }
 
+        public IActionResult Index2()
+        {
+            return View("View2");
+        }
+
+        public IActionResult InstructionFoVote()
+        {
+            return View("InstructionFoVote");
+        }
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
@@ -22,22 +31,6 @@ namespace Vybory.Controllers
             return View();
         }
 
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+      
     }
 }

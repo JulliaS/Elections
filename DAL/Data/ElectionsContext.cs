@@ -1,15 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Vybory.Models;
 
 namespace Vybory
 {
-    public class AppContext : DbContext
+    public class ElectionsContext : DbContext
     {
+        public ElectionsContext(DbContextOptions<ElectionsContext> options)
+            : base(options)
+        { }
+
         public DbSet<Address> Addresses { get; set; }
         public DbSet<Appeal> Appeals { get; set; }
         public DbSet<AppealType> AppealTypes { get; set; }

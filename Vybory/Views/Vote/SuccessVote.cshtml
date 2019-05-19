@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewData["Title"] = "SuccessVote";
+}
+
+<head>
+    <title>Голосування</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/CSS/ElectionStyle.css">
+</head>
+<body>
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index2", "Home")">Головна</a>
+    </div>
+    <div class="main">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Допомога</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="@Url.Action("Index2")">Інструкції</a>
+                <a href="@Url.Action("Index2")">Нормативно-правова база</a>
+                <a href="@Url.Action("Index2")">Довідкова інформація</a>
+            </div>
+        </div>
+        <p class="big_title">
+            Ви вже зробили свій вибір
+            <br />
+        </p>
+    </div>
+   
+    <script src="~/js/ForDropDown.js"></script>
+</body>
+

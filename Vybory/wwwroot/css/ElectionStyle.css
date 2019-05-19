@@ -1,0 +1,252 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+/* Style the header */
+.header {
+    background-color: #2F4F4F;
+    /*text-align: center;*/
+    padding: 20px, 5px;
+    font-size: 35px;
+    color: gold;
+    width: 100vw;
+    height: 10vh;
+    top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+    position: fixed;
+}
+.main {
+    background-image: url('../Images/prapor-ukrainy-3.jpg');
+    padding: 10px;
+    /*text-align: center;*/
+    font-size: 35px;
+    color: black;
+    width: 100vw;
+    height: 70vh;
+    margin-top: 8vh;
+    margin-bottom: 30vh;
+    margin-left: 0px;
+    margin-right: 0px;
+    position: fixed;
+}
+
+.main2 {
+    background-image: url('../Images/prapor-ukrainy-3.jpg');
+    padding: 10px;
+    text-align: center;
+    font-size: 35px;
+    color: black;
+    width: 100vw;
+    height: 90vh;
+    margin-top: 8vh;
+    margin-bottom: 30vh;
+    margin-left: 0px;
+    margin-right: 0px;
+    /*position: fixed;*/
+}
+
+.main3 {
+    background-image: url('../images/election.jpg');
+    padding: 10px;
+    /*text-align: center;*/
+    font-size: 35px;
+    color: black;
+    width: 100vw;
+    height: 90vh;
+    margin-top: 8vh;
+    margin-bottom: 30vh;
+    margin-left: 0px;
+    margin-right: 0px;
+    position: fixed;
+}
+
+.btninfo {
+    width: 20vw;
+    height: 20vh;
+    background-color: gold;
+    margin-left: 40vw;
+    margin-top: 40vh;
+}
+
+.formclass {
+    font-size: 20px;
+    position: center;
+}
+
+.footer {
+    background-color: #2F4F4F;
+    padding: 20px, 5px;
+    /*text-align: center;*/
+    color: gold;
+    font-size: 35px;
+    width: 100vw;
+    height: 20vh;
+    margin-top: 5px;
+    bottom: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    position: fixed;
+}
+
+.header a {
+    font-size: 35px;
+    color: gold;
+    font-style: inherit;
+    text-decoration: none !important;
+}
+.footer a {
+    font-size: 35px;
+    color: gold;
+    font-style: inherit;
+    text-decoration: none !important;
+}
+    .header p {
+        font-size: 35px;
+        color: gold;
+
+    }
+    .footer p {
+        font-size: 35px;
+        color: gold;
+     }
+
+.right_position {
+    /*text-align: right;*/
+    position: fixed;
+    margin-top: auto;
+    right: 10vw;
+    vertical-align: middle;
+    padding: 15px, 0px;
+    font-size: inherit;
+    color: inherit;
+}
+.left_position {
+    /*text-align: left;*/
+    position: fixed;
+    margin-top: auto;
+    left: 10vw;
+    font-size: inherit;
+    color: inherit;
+}
+.center_position {
+    position: fixed;
+    margin-top: auto;
+    margin-left:43vw;
+    text-align: center;
+    font-size: inherit;
+    color: inherit;
+}
+
+.big_title {
+    text-align: center;
+    margin: auto;
+    vertical-align: middle;
+    font-size: 45px;
+    font:bold;
+    color: inherit;
+}
+/*frame_up:after {
+    content: "";
+    display: table;
+    clear: both;
+}*/
+
+.dropbtn {
+    background-color: transparent;
+    color: black;
+    padding: 5px;
+    font-size: 20px;
+    border: none;
+    /*cursor: pointer;*/
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2F4F4F;
+    font-size: inherit;
+    min-width: 200px;
+    overflow: auto;
+    /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: gold;
+        font-size:inherit;
+        padding: 5px 5px;
+        text-decoration: none !important;
+        display: inline-block;
+    }
+
+/*.dropdown a:hover {
+    background-color: #ddd;
+}*/
+
+.show {
+    display: block;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+    float: left;
+    width: 30%;
+    height: 300px; /* only for demonstration, should be removed */
+    background: #ccc;
+    padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+article {
+    float: left;
+    padding: 20px;
+    width: 70%;
+    background-color: #f1f1f1;
+    height: 300px; /* only for demonstration, should be removed */
+}
+
+.clock {
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+/* Clear floats after the columns */
+/*section:after {
+    content: "";
+    display: table;
+    clear: both;
+}*/
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+/*@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}*/

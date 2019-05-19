@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "StartAdminPage";
+}
+
+<head>
+    <title>Головна</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/CSS/ElectionStyle.css">
+</head>
+<body>
+
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index", "Home")">Вихід/a>
+        <a class="right_position" href="@Url.Action("VoteResults", "Vote")">Результати Виборів</a><br />
+    </div>
+    <div class="main2">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Допомога</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="@Url.Action("Index2", "Home")">Інструкції</a>
+                <a href="@Url.Action("Index2", "Home")">Нормативно-правова база</a>
+                <a href="@Url.Action("Index2", "Home")">Довідкова інформація</a>
+            </div>
+        </div>
+        <div class="big_title">
+            <a href="@Url.Action("AdminElection", "Admin")">Інформація про вибори</a><br />
+            <a href="@Url.Action("AdminDistrict", "Admin")">Інформація про віртуальні округи</a><br />
+            <a href="@Url.Action("AdminPollingStation", "Admin")">Інформація про віртуальні дільниці</a><br />
+            <a href="@Url.Action("AdminAddress", "Admin")">Адреси</a><br />
+        </div>
+    </div>
+
+    <script src="~/js/ForDropDown.js"></script>
+</body>

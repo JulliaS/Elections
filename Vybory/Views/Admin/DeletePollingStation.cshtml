@@ -1,0 +1,48 @@
+﻿@model Vybory.Models.PollingStation
+@{
+    ViewData["Title"] = "DeletePollingStation";
+}
+
+<head>
+    <title>Головна</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/CSS/ElectionStyle.css">
+</head>
+
+<body>
+    <div class="header">
+        <a class="left_position" href="@Url.Action("StartAdminPage")">Початкова</a>
+    </div>
+    <div class="main2">
+        <form asp-action="DeletePollingStation" class="formclass">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Ім'я</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Number" class="control-label">Номер</label>
+                <input asp-for="Number" class="form-control" />
+                <span asp-validation-for="Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddressId" class="control-label">Адреса ID</label>
+                <input asp-for="AddressId" class="form-control" />
+                <span asp-validation-for="AddressId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DistrictId" class="control-label">Округ ID</label>
+                <input asp-for="DistrictId" class="form-control" />
+                <span asp-validation-for="DistrictId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Видалити" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+
+    <script src="~/js/ForDropDown.js"></script>
+</body>
+

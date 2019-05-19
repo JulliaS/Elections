@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Vybory.Models.User>
+@{
+    ViewData["Title"] = "StartVote";
+}
+
+<head>
+    <title>Бюлетень</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/CSS/ElectionStyle.css">
+</head>
+<body>
+    <div class="header">
+        <div class="left_position">
+            <a href="">Проголосувати</a>
+        </div>
+        <div class="left_position">
+            <div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn">Допомога</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="@Url.Action("Index2")">Інструкції</a>
+                    <a href="@Url.Action("Index2")">Нормативно-правова база</a>
+                    <a href="@Url.Action("Index2")">Довідкова інформація</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div>
+        <form method="post" class="main2">
+            <div>
+                @foreach (var user in Model)
+                {
+                    <input type="radio" name="cndt" asp-for="@user.Id" value="@user.Id" /> @user.Name @user.Surname <br />
+                }
+
+                <input type="submit" value="Проголосувати" />
+
+                @if (!string.IsNullOrEmpty(ViewBag.Message))
+                {
+                    <script type="text/javascript">
+                        alert('Ви вже використали свою можливість проголосувати');
+                    </script>
+                }
+            </div>
+        </form>
+        <input type="submit" value="Проголосувати" />
+    </div>
+
+    <script src="~/js/ForDropDown.js"></script>
+</body>
+

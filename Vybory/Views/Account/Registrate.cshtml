@@ -1,0 +1,73 @@
+﻿@model BLL.ViewModels.Registration
+@{
+    ViewData["Title"] = "Registration";
+}
+
+<head>
+    <title>Головна</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="~/CSS/ElectionStyle.css">
+</head>
+<body>
+
+    <div class="header">
+        <a class="left_position" href="@Url.Action("Index","Home")">Головна</a>
+    </div>
+    <div class="main2">
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Допомога</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="@Url.Action("Index2")">Інструкції</a>
+                <a href="@Url.Action("Index2")">Нормативно-правова база</a>
+                <a href="@Url.Action("Index2")">Довідкова інформація</a>
+            </div>
+        </div>
+        <br /><br />
+              <fieldset>
+                  <form asp-action="Registrate" asp-controller="Account" asp-anti-forgery="true" method="post">
+
+                      <p>Реєстрація</p>
+                      <div class="formclass form-horizontal">
+                          <div asp-validation-summary="ModelOnly"  class="text-danger"></div>
+
+                          <div class="form-group">
+                              <label asp-for="Id">ID</label>
+                              <input type="text" asp-for="Id" />
+                              <span asp-validation-for="Id" />
+                          </div>
+                          <div class="form-group">
+                              <label asp-for="Name">Ім'я</label>
+                              <input type="text" asp-for="Name" />
+                              <span asp-validation-for="Name" />
+                          </div>
+                          <div class="form-group">
+                              <label asp-for="Surname">Прізвище</label>
+                              <input type="text" asp-for="Surname" />
+                              <span asp-validation-for="Surname" />
+                          </div>
+                          <div class="form-group">
+                              <label asp-for="BirthDate">Дата Народження</label>
+                              <input type="date" asp-for="BirthDate" />
+                              <span asp-validation-for="BirthDate" />
+                          </div>
+                          <div class="form-group">
+                              <label asp-for="IPN">Ідентифікаційний номер</label>
+                              <input type="text" asp-for="IPN" />
+                              <span asp-validation-for="IPN" />
+                          </div>
+                          <div class="form-group">
+                              <label asp-for="Password">Пароль</label>
+                              <input asp-for="Password" />
+                              <span asp-validation-for="Password" />
+                          </div>
+                          <div class="form-group">
+                              <input type="submit" value="Зареєстуватись" class="btn" />
+                          </div>
+                      </div>
+                  </form>
+              </fieldset>
+
+    </div>
+    <script src="~/js/ForDropDown.js"></script>
+</body>
+
